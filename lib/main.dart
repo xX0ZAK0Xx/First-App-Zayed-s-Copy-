@@ -101,10 +101,10 @@ class MyApp extends StatelessWidget {
                        Text("Reels",
                          style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
                        ),
-                       Text("phoyto",
+                       Text("Photo",
                          style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
                        ),
-                        ),
+          ]),
             ),
 
 
