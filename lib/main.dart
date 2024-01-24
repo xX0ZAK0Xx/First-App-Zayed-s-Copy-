@@ -53,6 +53,8 @@ class MyApp extends StatelessWidget {
                 Icon(Icons.menu, color: Color.fromARGB(255, 150, 150, 150)),
               ],
             ),
+
+
             SizedBox(
               height: 70,
               child: Row(
@@ -66,7 +68,7 @@ class MyApp extends StatelessWidget {
                         width: 50),
                   ),
                   SizedBox(
-                    width: 290,
+                    width: 260,
                     height: 45,
                     child: OutlinedButton(
                       onPressed: () {},
@@ -82,9 +84,36 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
+                const Icon(Icons.photo_library, size: 25, color: Colors.green,),
                 ],
               ),
             ),
+
+
+            const SizedBox(
+              height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+             children: [
+                       Text("Stories",
+                         style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
+                       ),
+                       Text("Reels",
+                         style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
+                       ),
+                     ],
+                        ),
+            ),
+
+
+            const Row(
+              children: [
+                Image(
+                        image: AssetImage('photo_2024-01-24_20-33-51.jpg'),
+                        height: 250,
+                        width: 180),
+              ],
+            )
           ],
         ),
       ),
