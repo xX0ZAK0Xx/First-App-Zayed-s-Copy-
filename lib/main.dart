@@ -53,8 +53,6 @@ class MyApp extends StatelessWidget {
                 Icon(Icons.menu, color: Color.fromARGB(255, 150, 150, 150)),
               ],
             ),
-
-
             SizedBox(
               height: 70,
               child: Row(
@@ -63,7 +61,7 @@ class MyApp extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50),
                     child: const Image(
-                        image: AssetImage('assets/IMG_0974-01.jpeg'),
+                        image: AssetImage('assets/image1.jpg'),
                         height: 50,
                         width: 50),
                   ),
@@ -78,37 +76,90 @@ class MyApp extends StatelessWidget {
                           side: const BorderSide(
                               width: 1,
                               color: Color.fromARGB(255, 150, 150, 150))),
-                      child: const Text(
-                        "What's on your mind?                                                                    ",
-                        style: TextStyle(fontSize: 15, color: Colors.white),
+                      child: const Row(
+                        children: [
+                          Text(
+                            "What's on your mind?",
+                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                const Icon(Icons.photo_library, size: 25, color: Colors.green,),
+                  const Icon(
+                    Icons.photo_library,
+                    size: 25,
+                    color: Colors.green,
+                  ),
                 ],
               ),
             ),
-
-
             const SizedBox(
               height: 50,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-             children: [
-                       Text("Stories",
-                         style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
-                       ),
-                       Text("Reels",
-                         style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
-                       ),
-                       Text("Photo",
-                         style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
-                       ),
-          ]),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      "Stories",
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 150, 150, 150)),
+                    ),
+                    Text(
+                      "Reels",
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 150, 150, 150)),
+                    ),
+                    Text(
+                      "Photo",
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 150, 150, 150)),
+                    ),
+                  ]),
             ),
+            Row(
+              children: [
+                //Add Story
+                Stack(
+                  children:[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image(image: AssetImage('assets/image1.jpg'), fit: BoxFit.cover, height: 300, 
+                      width: MediaQuery.of(context).size.width*0.4,),
+                    ),
+
+                    
+                    //Text
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+
+                        height: 100,
+                        width: MediaQuery.of(context).size.width*0.4,
+                        child: Center(child: Text("Add a\nStory", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),)),
+                        decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20)),
+                      )
+                    ),
+                    //Button
+                    Positioned(child: Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(100)),
+                      child: Icon(Icons.add)), top: 170,left: 55),
+
+                  ]
+                )
 
 
-           
+                //Others Story
+              ],
+            )
           ],
         ),
       ),
