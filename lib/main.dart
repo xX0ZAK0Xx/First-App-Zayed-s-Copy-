@@ -101,19 +101,14 @@ class MyApp extends StatelessWidget {
                        Text("Reels",
                          style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
                        ),
-                     ],
+                       Text("phoyto",
+                         style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 150, 150, 150)),
+                       ),
                         ),
             ),
 
 
-            const Row(
-              children: [
-                Image(
-                        image: AssetImage('photo_2024-01-24_20-33-51.jpg'),
-                        height: 250,
-                        width: 180),
-              ],
-            )
+           
           ],
         ),
       ),
